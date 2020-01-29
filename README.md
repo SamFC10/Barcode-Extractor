@@ -14,7 +14,7 @@ Extract digits present in the training set images using cv2.findContours(). Manu
 ![digit](https://user-images.githubusercontent.com/47391270/73359750-8b3a4b80-42c7-11ea-8dc2-0531b9f08e53.png)
 
 ### HOG Feature Extractor
-Feature extraction is the process of identifying the unique characteristics of an input (digit in our case) which enables in training a Machine Learning algorithm. Histogram of Oriented Gradients(HOG) are feature extractors mainly used in computer vision object detection. The reason HOG is utilized so heavily is because local object appearance and shape can be characterized using the distribution of local intensity gradients.
+Feature extraction is the process of identifying the unique characteristics of an input (digit in our case) which enables in training a Machine Learning algorithm. Histogram of Oriented Gradients(HOG) are feature extractors mainly used in computer vision for object detection. The reason HOG is utilized so heavily is because local object appearance and shape can be characterized using the distribution of local intensity gradients.
 
 The extracted features from HOG are given as input to train a k-neighbours classifier with n_neighbors=1. 
 
@@ -24,3 +24,8 @@ The extracted features from HOG are given as input to train a k-neighbours class
 - extract features for the digits using HOG 
 - predict on these features using the trained knn model.
 - concatenate the predicted digits to obtain the barcode number
+
+### References
+https://towardsdatascience.com/scanned-digits-recognition-using-k-nearest-neighbor-k-nn-d1a1528f0dea
+https://gurus.pyimagesearch.com/lesson-sample-histogram-of-oriented-gradients-and-car-logo-recognition/
+https://stackoverflow.com/questions/9413216/simple-digit-recognition-ocr-in-opencv-python
